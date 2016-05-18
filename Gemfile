@@ -1,3 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'xbee-ruby'
+# Specify your gem's dependencies in ruby-m3pi.gemspec
+gemspec

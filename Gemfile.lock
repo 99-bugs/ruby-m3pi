@@ -1,6 +1,14 @@
+PATH
+  remote: .
+  specs:
+    ruby-m3pi (0.1.0)
+      xbee-ruby
+
 GEM
   remote: https://rubygems.org/
   specs:
+    minitest (5.8.3)
+    rake (10.4.2)
     serialport (1.3.1)
     xbee-ruby (0.0.4)
       serialport (>= 1.1.0)
@@ -9,7 +17,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  xbee-ruby
+  bundler (~> 1.12)
+  minitest (~> 5.0)
+  rake (~> 10.0)
+  ruby-m3pi!
 
 BUNDLED WITH
    1.12.4
