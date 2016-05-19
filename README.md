@@ -24,6 +24,10 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+## Mbed Racing Robots firmware
+
+https://developer.mbed.org/users/sillevl/code/RacingRobots_remotecontrol/
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
