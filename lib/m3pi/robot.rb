@@ -4,9 +4,9 @@ module M3pi
 
   class Robot
 
-    def initialize port = '/dev/ttyUSB0', baud = 9600
-      @xbee = XBeeRuby::XBee.new port: port, rate: baud
-      @address = address = XBeeRuby::Address64.new 0x00,0x13,0xA2,0x00,0x40,0xB4,0x10,0x5D
+    def initialize address, serial
+      @xbee = XBeeRuby::XBee.new serial: serial
+      @address = address = XBeeRuby::Address64.new *address
       open
     end
 

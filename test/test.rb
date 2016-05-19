@@ -3,13 +3,14 @@ require 'm3pi'
 require 'io/console'
 
 
-robot = M3pi::Robot.new '/dev/ttyUSB1'
 
-# 20.times do
-#   robot.drive 100, 0
-#   sleep 0.075
-# end
 
+serial = SerialPort.new '/dev/ttyUSB1', 9600
+
+robot = M3pi::Robot.new [0x00,0x13,0xA2,0x00,0x40,0xB4,0x10,0x5D], serial
+
+
+puts "Press x to quit"
 
 while key = STDIN.getch
   case key
