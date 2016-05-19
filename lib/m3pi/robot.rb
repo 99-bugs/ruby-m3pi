@@ -19,7 +19,7 @@ module M3pi
       raise "Speed is to low, speed must be greater than -100" if speed < -100
       raise "Turn radius is to high, turn_radius must be less than 100" if speed > 100
       raise "Turn radius is to low, turn_radius must be greater than -100" if speed < -100
-      send [0x10, speed, turn_radius]
+      send [0x10, [speed].pack("c").getbyte(0), [turn_radius].pack("c").getbyte(0)]
     end
 
     def open
