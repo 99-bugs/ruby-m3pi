@@ -21,6 +21,22 @@ module M3pi
       send [0x10, [speed].pack("c").getbyte(0), [turn_radius].pack("c").getbyte(0)]
     end
 
+    def forward
+      drive 100, 0
+    end
+
+    def reverse
+      drive -100, 0
+    end
+
+    def left
+      drive 0, -100
+    end
+
+    def right
+      drive 0, 100
+    end
+
   end
 
 end

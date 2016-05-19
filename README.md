@@ -22,7 +22,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'm3pi'
+
+# create Serialport object for communication with the xbee coordinator
+serial = SerialPort.new '/dev/ttyUSB1', 9600
+serial.open
+
+# create an new Robot instance, providing his MAC address
+robot = M3pi::Robot.new [0x00,0x13,0xA2,0x00,0x40,0xB4,0x10,0x5D], serial
+
+# control the robot (note: the commands must be repeated to keep the robot driving)
+
+# go forward
+robot.forward
+
+# drive backwards
+robot.reverse
+
+# turn left
+robot.left
+
+# turn right
+robot.right
+```
 
 ## Development
 
@@ -38,4 +61,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-

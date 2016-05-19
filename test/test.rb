@@ -16,13 +16,13 @@ puts "Press x to quit"
 while key = STDIN.getch
   case key
   when 'z' #forward
-    robot.drive 100, 0
+    robot.forward
   when 'q' #left
-    robot.drive 0, -100
+    robot.left
   when 's' #back
-    robot.drive -100, 0
+    robot.reverse
   when 'd' #right
-    robot.drive 0, 100
+    robot.right
   when 'x' # quit
     break
   end
