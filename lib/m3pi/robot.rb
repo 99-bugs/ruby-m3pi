@@ -7,7 +7,6 @@ module M3pi
     def initialize address, serial
       @xbee = XBeeRuby::XBee.new serial: serial
       @address = address = XBeeRuby::Address64.new *address
-      open
     end
 
     def send data
@@ -20,14 +19,6 @@ module M3pi
       raise "Turn radius is to high, turn_radius must be less than 100" if speed > 100
       raise "Turn radius is to low, turn_radius must be greater than -100" if speed < -100
       send [0x10, [speed].pack("c").getbyte(0), [turn_radius].pack("c").getbyte(0)]
-    end
-
-    def open
-      @xbee.open
-    end
-
-    def close
-      @xbee.close
     end
 
   end
