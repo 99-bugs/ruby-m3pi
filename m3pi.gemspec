@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'm3pi/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "ruby-m3pi"
+  spec.name          = "m3pi"
   spec.version       = M3pi::VERSION
   spec.authors       = ["Sille Van Landschoot"]
   spec.email         = ["info@sillevl.be"]
